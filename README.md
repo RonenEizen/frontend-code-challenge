@@ -1,3 +1,8 @@
+# App Instrucions
+
+1. <code>npm install</code>
+2. <code>npm start</code>
+
 # Frontend code challenge (CSS)
 
 ## Problem

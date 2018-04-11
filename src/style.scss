@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,400i,700|Oswald:400,700');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css'); 
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  overflow: hidden;
+  
+  body {
+    height: 100%;
+    overflow: hidden;
+
+    .container {
+      height: 100%;
+
+      md-content {
+        padding: 24px;
+      }
+
+      md-card-title-text {
+        font-family: Oswald, sans-serif;
+        width: 100%;
+
+        span {
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      // Preserves 16:9 ration for videos 
+      .video {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        padding-top: 56.25% !important;
+        
+        * {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .image {
+        width: 100%;
+        vertical-align: middle;
+        -webkit-transition: opacity 0.6s ease-out;
+        transition: opacity 0.6s ease-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .image.img-loaded {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}

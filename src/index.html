@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+  <title>Frontend Code Challenge</title>
+</head>
+<body ng-app="app" ng-controller="appCtrl" ng-cloak>
+  <div layout="column" class="container">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2 class="md-flex">Frontend Code Challenge</h2>
+      </div>
+    </md-toolbar>
+    <md-content flex layout-padding >
+      <div class="masonry container" angular-grid="items">
+        <md-card ng-repeat="item in items track by $index">
+          <img ng-if="item.image" ng-src="{{item.image}}" class="image" />
+          <div class="video" ng-if="item.video"><iframe src="{{ item.video | trustAsResourceUrl }}" frameborder="0" allow="autoplay; encrypted-media" autoplay></iframe></div>
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">{{ ::item.title }}</span>
+            </md-card-title-text>
+          </md-card-title>
+          <md-card-content ng-if="item.content">
+            <p>{{ ::item.content }}</p>
+          </md-card-content>
+          <md-card-actions layout="row" layout-align="end center">
+            <md-button class="md-icon-button" aria-label="Favorite">
+              <md-icon>menu</md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Settings">
+              <md-icon>favorite_border</md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Share">
+              <md-icon>share</md-icon>
+            </md-button>
+          </md-card-actions>
+        </md-card>
+      </div>
+    </md-content>
+  </div>
+</body>
+</html>
