@@ -1,7 +1,7 @@
 # App Instrucions
 
-1. <code>npm install</code>
-2. <code>npm start</code>
+1. ```npm install```
+2. ```npm start```
 
 # Frontend code challenge (CSS)
 
